@@ -11,7 +11,7 @@ const form = document.querySelector('form')
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
     // console.log('TESTING')
-    const url = 'http://localhost:3000/weather?address='+form.elements['loc'].value 
+    const url = '/weather?address='+form.elements['loc'].value
     // console.log(url)
     fetch(url).then((response)=>{
         response.json().then((data)=>{
