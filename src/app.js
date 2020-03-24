@@ -19,7 +19,7 @@ app.use(express.static(PublicDirectory))
  
 app.get('',(req,res)=>{
     res.render('index',{
-        name:'Andrew Mead',
+        name:'Dipesh Jindal',
         title:'Weather app'
     })
 })
@@ -35,7 +35,7 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         message:'Stay safe',
         title:'Help',
-        name:'Dipesh'
+        name:'Dipesh Jindal'
     })
 })
 
@@ -91,7 +91,7 @@ app.get('/help/*',(req,res)=>{
     res.render('404',{
         errormessage:'Help article not found',
         title:"404 Page",
-        name:"Dipesh"
+        name:"Dipesh Jindal"
     })
 })
 
