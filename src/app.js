@@ -60,7 +60,6 @@ app.get('/weather',(req,res)=>{
     geocode(req.query.address,(error,{ latitude , longitude , place}={})=>{
         if(error)
         {
-            // return(console.log(error))
             return res.send({
                 error
             })
@@ -70,15 +69,12 @@ app.get('/weather',(req,res)=>{
             forecast(latitude,longitude,(error,data)=>{
                 if(error)
                 {
-                    // return(console.log(error))
                     return res.send({
                         error
                     })
                 }
                 else
                 {
-                    // console.log(place)
-                    // console.log(data)
                     return res.send({
                         place:place,
                         weather:data
